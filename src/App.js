@@ -12,17 +12,15 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
-        <div id="mobile-view-container">
-          <Router>
-            <ScrollToTop/>
-            <div className="component-container">
-              <Switch>
-                <Route exact path="/create-profile" component={CreateProfile} />
-                <Route exact path="/rc-survey" component={RCSurvey} />
-              </Switch>
-            </div>
-          </Router>
-        </div>
+        <Router>
+          <ScrollToTop/>
+          <div className="component-container">
+            <Switch>
+              <Route exact path="/create-profile" component={CreateProfile} />
+              <Route exact path="/rc-survey" component={RCSurvey} />
+            </Switch>
+          </div>
+        </Router>
       </div>
     );
   }

@@ -144,123 +144,127 @@ export default class CreateProfile extends React.Component {
 
     render() {
         return (
-            <div className="create-profile">
-                <div className="create-profile-container">
-                    <Avatar alt="Remy Sharp" src={myProfilePic} id="my-profile-pic" />
-                    <TextField id="name-input" label="Name"
-                        defaultValue="Stephanie Liu" variant="outlined"
-                    />
-                    <div className="contact-info-container">
-                        <Grid container spacing={1} alignItems="flex-end">
-                            <Grid item>
-                                <AndroidPhone />
+            <div id="mobile-view-container">
+                <div className="create-profile">
+                    <div className="create-profile-container">
+                        <Avatar alt="Remy Sharp" src={myProfilePic} id="my-profile-pic" />
+                        <TextField id="name-input" label="Name"
+                            defaultValue="Stephanie Liu" variant="outlined"
+                        />
+                        <div className="contact-info-container">
+                            <Grid container spacing={1} alignItems="flex-end">
+                                <Grid item>
+                                    <AndroidPhone />
+                                </Grid>
+                                <Grid item>
+                                    <TextField id="phone-input" label="Phone #"
+                                        defaultValue="123456789" variant="outlined"
+                                    />
+                                </Grid>
+                                <Grid item>
+                                    <MailOutline />
+                                </Grid>
+                                <Grid item>
+                                    <TextField id="email-input" label="Email"
+                                        defaultValue="lius1@mcmaster.ca" variant="outlined"
+                                    />
+                                </Grid>
                             </Grid>
-                            <Grid item>
-                                <TextField id="phone-input" label="Phone #"
-                                    defaultValue="123456789" variant="outlined"
-                                />
+                        </div>
+                        <div className="school-info-container">
+                            <Grid container spacing={1} alignItems="flex-end">
+                                <Grid item>
+                                    <CardMembershipIcon />
+                                </Grid>
+                                <Grid item>
+                                    <TextField id="degree-input" label="Degree"
+                                        defaultValue="Psychology III"
+                                        InputProps={{
+                                            readOnly: true,
+                                        }}
+                                    />
+                                </Grid>
+                                <Grid item>
+                                    <AssignmentInd />
+                                </Grid>
+                                <Grid item>
+                                    <TextField id="student-num-input" label="Student #"
+                                        defaultValue="400012345"
+                                        InputProps={{
+                                            readOnly: true,
+                                        }}
+                                    />
+                                </Grid>
                             </Grid>
-                            <Grid item>
-                                <MailOutline />
-                            </Grid>
-                            <Grid item>
-                                <TextField id="email-input" label="Email"
-                                    defaultValue="lius1@mcmaster.ca" variant="outlined"
-                                />
-                            </Grid>
-                        </Grid>
-                    </div>
-                    <div className="school-info-container">
-                        <Grid container spacing={1} alignItems="flex-end">
-                            <Grid item>
-                                <CardMembershipIcon />
-                            </Grid>
-                            <Grid item>
-                                <TextField id="degree-input" label="Degree"
-                                    defaultValue="Psychology III"
-                                    InputProps={{
-                                        readOnly: true,
-                                    }}
-                                />
-                            </Grid>
-                            <Grid item>
-                                <AssignmentInd />
-                            </Grid>
-                            <Grid item>
-                                <TextField id="student-num-input" label="Student #"
-                                    defaultValue="400012345"
-                                    InputProps={{
-                                        readOnly: true,
-                                    }}
-                                />
-                            </Grid>
-                        </Grid>
 
+                        </div>
+                    </div>
+                    <Divider className='create-profile-divider' />
+                    <div className="map-container">
+                        <FormLabel component="legend">Location Preference</FormLabel>
+                        <div>
+                            <FormControl variant="outlined">
+                                <FormGroup>
+                                    <FormControlLabel
+                                        control={<Checkbox color="primary" checked={this.state.ainslie_wood} onChange={this.handleChange} name="ainslie_wood" />}
+                                        label="Ainslie Wood"
+                                    />
+                                    <FormControlLabel
+                                        control={<Checkbox color="primary" checked={this.state.ainslie_wood_east} onChange={this.handleChange} name="ainslie_wood_east" />}
+                                        label="Ainslie Wood East"
+                                    />
+                                    <FormControlLabel
+                                        control={<Checkbox color="primary" checked={this.state.ainslie_wood_north} onChange={this.handleChange} name="ainslie_wood_north" />}
+                                        label="Ainslie Wood North"
+                                    />
+                                    <FormControlLabel
+                                        control={<Checkbox color="primary" checked={this.state.university_gardens} onChange={this.handleChange} name="university_gardens" />}
+                                        label="University Gardens"
+                                    />
+                                </FormGroup>
+                            </FormControl>
+                            <FormControl variant="outlined">
+                                <FormGroup>
+                                    <FormControlLabel
+                                        control={<Checkbox color="primary" checked={this.state.westdale} onChange={this.handleChange} name="westdale" />}
+                                        label="Westdale"
+                                    />
+                                    <FormControlLabel
+                                        control={<Checkbox color="primary" checked={this.state.westdale_north} onChange={this.handleChange} name="westdale_north" />}
+                                        label="Westdale North"
+                                    />
+                                    <FormControlLabel
+                                        control={<Checkbox color="primary" checked={this.state.westdale_south} onChange={this.handleChange} name="westdale_south" />}
+                                        label="Westdale South"
+                                    />
+                                </FormGroup>
+                                
+                            </FormControl>
+                        </div>
+                        <FormHelperText>Select 3 locations</FormHelperText>
+                        {/* <PinchToZoom>
+                            <img src={McMaster_Sectors} alt="McMaster Sectors"></img>
+                        </PinchToZoom>  */}
+                        <img id="mcmaster-sector-img" src={McMaster_Sectors} alt="McMaster Sectors"></img>
+                        
+                        
+                    </div>
+                    <Divider className='create-profile-divider' />
+                    <div className="navigate-next-container">
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            endIcon={<ArrowForward></ArrowForward>}
+                            disabled={this.state.selected !== 3}
+                            href="http://localhost:3000/#/rc-survey"
+                        >
+                            Next
+                        </Button>
                     </div>
                 </div>
-                <Divider className='create-profile-divider' />
-                <div className="map-container">
-                    <FormLabel component="legend">Location Preference</FormLabel>
-                    <div>
-                        <FormControl variant="outlined">
-                            <FormGroup>
-                                <FormControlLabel
-                                    control={<Checkbox color="primary" checked={this.state.ainslie_wood} onChange={this.handleChange} name="ainslie_wood" />}
-                                    label="Ainslie Wood"
-                                />
-                                <FormControlLabel
-                                    control={<Checkbox color="primary" checked={this.state.ainslie_wood_east} onChange={this.handleChange} name="ainslie_wood_east" />}
-                                    label="Ainslie Wood East"
-                                />
-                                <FormControlLabel
-                                    control={<Checkbox color="primary" checked={this.state.ainslie_wood_north} onChange={this.handleChange} name="ainslie_wood_north" />}
-                                    label="Ainslie Wood North"
-                                />
-                                <FormControlLabel
-                                    control={<Checkbox color="primary" checked={this.state.university_gardens} onChange={this.handleChange} name="university_gardens" />}
-                                    label="University Gardens"
-                                />
-                            </FormGroup>
-                        </FormControl>
-                        <FormControl variant="outlined">
-                            <FormGroup>
-                                <FormControlLabel
-                                    control={<Checkbox color="primary" checked={this.state.westdale} onChange={this.handleChange} name="westdale" />}
-                                    label="Westdale"
-                                />
-                                <FormControlLabel
-                                    control={<Checkbox color="primary" checked={this.state.westdale_north} onChange={this.handleChange} name="westdale_north" />}
-                                    label="Westdale North"
-                                />
-                                <FormControlLabel
-                                    control={<Checkbox color="primary" checked={this.state.westdale_south} onChange={this.handleChange} name="westdale_south" />}
-                                    label="Westdale South"
-                                />
-                            </FormGroup>
-                            
-                        </FormControl>
-                    </div>
-                    <FormHelperText>Select 3 locations</FormHelperText>
-                    {/* <PinchToZoom>
-                        <img src={McMaster_Sectors} alt="McMaster Sectors"></img>
-                    </PinchToZoom>  */}
-                    <img id="mcmaster-sector-img" src={McMaster_Sectors} alt="McMaster Sectors"></img>
-                    
-                    
-                </div>
-                <Divider className='create-profile-divider' />
-                <div className="navigate-next-container">
-                    <Button
-                        variant="contained"
-                        color="primary"
-                        endIcon={<ArrowForward></ArrowForward>}
-                        disabled={this.state.selected !== 3}
-                        href="http://localhost:3000/#/rc-survey"
-                    >
-                        Next
-                    </Button>
-                </div>
+            
             </div>
+            
         );
     }
 }
