@@ -1,4 +1,5 @@
 import React from 'react';
+import './create-profile.css'
 import Avatar from '@material-ui/core/Avatar'
 import myProfilePic from './../resources/my-user-profile.png'
 import McMaster_Sectors from './../resources/McMaster_Sectors.png'

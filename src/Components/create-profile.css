@@ -1,0 +1,75 @@
+div#my-profile-pic {
+    width: 90px;
+    height: 90px;
+    margin: 12px 0px;
+}
+  
+img.MuiAvatar-img {
+    width: 105px !important;
+    height: 105px !important;
+}
+  
+.create-profile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+input#name-input {
+    text-align: center;
+    padding: 4px 0px;
+}
+  
+.contact-info-container {
+    margin-top: 12px;
+}
+  
+input#phone-input {
+    padding: 8px 0px 4px 4px;
+    width: 90px;
+font-size: revert;
+  }
+  
+input#email-input {
+    padding: 4px;
+    padding-top: 8px;
+    width: 125px;
+    font-size: revert;
+}
+  
+.school-info-container {
+    margin-top: 8px;
+}
+  
+input#degree-input {
+    padding: 8px 0px 4px 4px;
+    width: 90px;
+    font-size: revert;
+}
+  
+input#student-num-input {
+    padding: 4px;
+    padding-top: 8px;
+    width: 125px;
+    font-size: revert;
+}
+  
+.create-profile-divider {
+    margin: 20px 16px !important;
+    background-color: rgb(0 0 0 / 30%) !important;
+}
+  
+.map-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pinch-to-zoom-container {
+    width: 100% !important;
+}
+  
+#mcmaster-sector-img {
+    width: 95% !important;
+}

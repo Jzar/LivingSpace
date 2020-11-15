@@ -1,0 +1,30 @@
+.navigate-next-container {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0px 8px 16px 0px;
+}
+
+.survey-question-container {
+    margin: 24px 24px;
+}
+  
+.MuiPaper-root.MuiGrid-root.makeStyles-root-6.makeStyles-root-151.makeStyles-elevation1-15.MuiGrid-container.MuiGrid-spacing-xs-1.MuiGrid-align-items-xs-center.MuiPaper-elevation1.MuiPaper-rounded {
+    margin: 12px 0px 8px 0px;
+}
+  
+  .survey-question-text {
+text-align: left;
+}
+  
+#messy-living-room-img {
+    width: 100%;
+}
+
+#grocery-lineup-img{
+    width: 100%;
+}
+
+.create-profile-divider {
+    margin: 20px 16px !important;
+    background-color: rgb(0 0 0 / 30%) !important;
+}

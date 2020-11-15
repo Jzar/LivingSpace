@@ -1,4 +1,5 @@
 import React from 'react';
+import './rc-survey.css'
 import MessyLivingRoom from './../resources/messy-living-room.png'
 import GroceryLineup from './../resources/grocery-lineup.png'
 import AnnoyingSound from './../resources/annoying-sound.wav'
