@@ -1,5 +1,4 @@
 import React from 'react';
-import "./App.css";
 import 'react-svg-radar-chart/build/css/index.css'
 import RadarChart from 'react-svg-radar-chart';
 import {Card, CardContent,  Typography, Avatar,IconButton} from "@material-ui/core"
