@@ -12,6 +12,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Router>
+          <ScrollToTop/>
           <div className="component-container">
             <Switch>
               <Route exact path="/create-profile" component={CreateProfile} />
