@@ -121,7 +121,10 @@
   .feed-container{
     background-color: gray;
   }
-  
+  .all-text-container{
+      text-align: left !important;
+
+  }
   
   .all-cards {
    max-height: 100%;

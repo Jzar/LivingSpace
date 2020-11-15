@@ -1,6 +1,7 @@
 import React from 'react';
 import 'react-svg-radar-chart/build/css/index.css'
 import RadarChart from 'react-svg-radar-chart';
+import "./ProfileFeed.css";
 import {Card, CardContent,  Typography, Avatar,IconButton} from "@material-ui/core"
 import {Wc, LocationOn, AttachMoney, School} from "@material-ui/icons"
 import user1 from "../resources/user1.jpg";
@@ -68,15 +69,12 @@ export default function ProfileCard() {
                         <School className="school-icon-container" color= "primary"/> 
                     </div>
                     <div className="all-text-container" style={{width:"60%", height:"100%"}}> 
-                        <div>
-                            <Typography className="gender-text-container"> <span style={{fontWeight:"bold"}}>Male | 20 </span></Typography>
-                            <Typography className="location-text-container"> <span style={{fontWeight:"bold"}}>Westdale</span></Typography> 
-                            <Typography className="budget-text-container"> <span style={{fontWeight:"bold"}}>$500-$600</span> </Typography>
-                            <Typography className="location-text-container"> <span style={{fontWeight:"bold"}}>SFWRENG II</span></Typography> 
-                        </div>
-                                                            
-                    
-                </div>
+                        
+                        <Typography className="gender-text-container"> <span style={{fontWeight:"bold"}}>Male | 20 </span></Typography>
+                        <Typography className="location-text-container"> <span style={{fontWeight:"bold"}}>Westdale</span></Typography> 
+                        <Typography className="budget-text-container"> <span style={{fontWeight:"bold"}}>$500-$600</span> </Typography>
+                        <Typography className="location-text-container"> <span style={{fontWeight:"bold"}}>SFWRENG II</span></Typography> 
+                    </div>
                 <div className ="percentage-preview-container" >
                      <RadarChart
                         captions={captions}
