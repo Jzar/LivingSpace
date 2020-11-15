@@ -4,6 +4,7 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import CreateProfile from './Components/create-profile'
 import RCSurvey from './Components/rc-survey'
 import ScrollToTop from './Components/scroll-to-top'
+import ProfileFeed from "./Components/ProfileFeed"
 
 
 
@@ -18,6 +19,8 @@ class App extends React.Component {
             <Switch>
               <Route exact path="/create-profile" component={CreateProfile} />
               <Route exact path="/rc-survey" component={RCSurvey} />
+              <Route exact path="/profile-feed" component={ProfileFeed} />
+              
             </Switch>
           </div>
         </Router>
