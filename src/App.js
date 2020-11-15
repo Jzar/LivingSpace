@@ -3,6 +3,7 @@ import './App.css';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import CreateProfile from './Components/create-profile'
 import RCSurvey from './Components/rc-survey'
+import ScrollToTop from './Components/scroll-to-top'
 
 
 
