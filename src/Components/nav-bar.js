@@ -28,7 +28,7 @@ import IconButton from '@material-ui/core/IconButton';
 
     function getSearchIcon(url){
         switch(url){
-            case "/search":
+            case "/profile-feed":
                 return(
                     <PageviewIcon fontSize="large"/>
                 );
@@ -43,7 +43,7 @@ import IconButton from '@material-ui/core/IconButton';
 
     function getProfileIcon(url){
         switch(url){
-            case "/profile":
+            case "/user-settings":
                 return(
                     <AccountCircleIcon fontSize="large"/>
                 );
@@ -63,12 +63,12 @@ import IconButton from '@material-ui/core/IconButton';
                 </IconButton>
             </div>
             <div>
-                <IconButton component={Link} to={"/search"} >
+                <IconButton component={Link} to={"/profile-feed"} >
                     {getSearchIcon(props.url)}
                 </IconButton>
             </div>     
             <div >
-                <IconButton component={Link} to={"/profile"} >
+                <IconButton component={Link} to={"/user-settings"} >
                     {getProfileIcon(props.url)}
                 </IconButton>
             </div>     

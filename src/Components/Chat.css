@@ -1,0 +1,125 @@
+.posts {
+  width: 1000px;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.outerDiv
+{
+    height: auto;
+    width: auto;
+    margin: 0px auto;
+}
+.leftDiv
+{
+    width: 25%;
+    float: left;
+}
+.rightDiv
+{
+    width: 75%;
+    float: right;
+}	
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: center;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+input[type='checkbox'] {
+  width:30px;
+  height:30px;
+  background:white;
+  border-radius:5px;
+  border:2px solid #555;
+}
+
+
+label {
+  display: inline-block;
+  color: white;
+  vertical-align: middle;
+}
+
+div#my-profile-pic {
+  width: 60px;
+  height: 60px;
+  margin: 12px 0px;
+}
+
+img.MuiAvatar-img {
+  width: 60px;
+  height: 60px;
+  margin: 12px 0px;
+}
+
+#navContainer {
+
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 30px ;
+}
+
+#navBarComponentContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+}

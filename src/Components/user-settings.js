@@ -8,6 +8,8 @@ import FormControl from '@material-ui/core/FormControl';
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
+import NavBar from "./nav-bar";
+
 
 // Icons and Images
 import './user-settings.css';
@@ -277,6 +279,9 @@ export default class UserSettings extends React.Component {
 
                 <div className="secDiv">
                     <Button id="editBtn">Retake RCI Survey</Button>
+                </div>
+                <div>
+                <NavBar url="/user-settings"/>
                 </div>
             </div>
         )

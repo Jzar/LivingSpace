@@ -7,7 +7,7 @@ import {
     Link
   } from "react-router-dom";
 
-import '../App.css';
+import './Chat.css';
 
 
 class CustomChat extends Component{

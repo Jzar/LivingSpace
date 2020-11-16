@@ -9,6 +9,7 @@ import SummaryCreateProfile from './Components/summary-create-profile'
 import UserSettings from './Components/user-settings'
 import GroupSettings from './Components/group-settings'
 import SSO from './Components/sso'
+import ChatView from './Components/chat-view'
 
 
 
@@ -29,6 +30,7 @@ class App extends React.Component {
               <Route exact path="/group-settings" component={GroupSettings} />
               <Route exact path="/sso" component={SSO}/>
             </Switch>
+            <ChatView />
           </div>
         </Router>
       </div>

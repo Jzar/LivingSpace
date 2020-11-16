@@ -10,7 +10,7 @@ import {
   } from "react-router-dom";
 
 import Typography from '@material-ui/core/Typography';
-import '../App.css';
+import './Chat.css';
 
 function getProfilePic(name){
     name = name.split(",")[0];
