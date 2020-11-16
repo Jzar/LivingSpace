@@ -20,6 +20,7 @@ import FormLabel from '@material-ui/core/FormLabel';
 // import Icon from '@material-ui/core/Icon';
 import Button from '@material-ui/core/Button';
 import ArrowForward from '@material-ui/icons/ArrowForward';
+import {Link} from "react-router-dom";
 
 export default class CreateProfile extends React.Component {
     constructor (props) {
@@ -256,7 +257,7 @@ export default class CreateProfile extends React.Component {
                             color="primary"
                             endIcon={<ArrowForward></ArrowForward>}
                             disabled={this.state.selected !== 3}
-                            href="http://localhost:3000/#/rc-survey"
+                            component={Link} to={"/rc-survey"}
                         >
                             Next
                         </Button>

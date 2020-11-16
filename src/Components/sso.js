@@ -2,6 +2,7 @@ import React from 'react';
 import { Typography, 
     Button,
     TextField } from '@material-ui/core';
+import {Link} from "react-router-dom";
 
 export default class SSO extends React.Component {
 
@@ -17,7 +18,7 @@ export default class SSO extends React.Component {
                 label="McMaster ID"
                     />
                 <br/>
-                <Button
+                <Button component={Link} to={"/create-profile"}
                 >Login with Single Sign On (SSO)</Button>
                 </div>
 

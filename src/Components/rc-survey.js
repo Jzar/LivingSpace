@@ -13,6 +13,7 @@ import Button from '@material-ui/core/Button';
 import ArrowForward from '@material-ui/icons/ArrowForward';
 import Divider from '@material-ui/core/Divider';
 import AudioPlayer from 'material-ui-audio-player';
+import {Link} from "react-router-dom";
 
 export default class RCSurvey extends React.Component {
     constructor(props) {
@@ -126,7 +127,7 @@ export default class RCSurvey extends React.Component {
                             variant="contained"
                             color="primary"
                             endIcon={<ArrowForward></ArrowForward>}
-                            href="http://localhost:3000/#/summary-create-profile"
+                            component={Link} to={"/summary-create-profile"}
                         >
                             Next
                         </Button>
