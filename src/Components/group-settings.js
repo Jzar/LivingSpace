@@ -8,7 +8,11 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-import Divider from '@material-ui/core/Divider'
+import Divider from '@material-ui/core/Divider';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
+import InputAdornment from '@material-ui/core/InputAdornment';
+
 
 // Icons and Images
 import './group-settings.css';
@@ -22,10 +26,23 @@ export default class GroupSettings extends React.Component {
         super(props);
         this.state = {
             editGN: true,
+            editR: true,
             newChore: false,
+            cName: "",
+            cUser: "",
+            cList: [{c: "Clean Upstairs Bathroom", u: "Andy Smith"},
+                {c: "Clean Common Room", u: "Andy Smith"},
+                {c: "Clean Kitchen", u: "Bob Doe"},
+                {c: "Take out Trash", u: "Stephanie Liu"}],
+            rTotal: "1800",
+            rDue: "2020-11-03",
+            rPay1: 600,
+            rPay2: 650,
+            rPay3: 550,
         }
 
         this.changeGN = this.changeGN.bind(this);
+        this.changeR = this.changeR.bind(this);
         this.changeChore = this.changeChore.bind(this);
     }
 
@@ -35,11 +52,46 @@ export default class GroupSettings extends React.Component {
         })
     }
 
-    changeChore(){
+    changeR(){
         this.setState({
-            newChore: !this.state.newChore
+            editR: !this.state.editR
         })
     }
+
+    changeChore(){
+        if (this.state.newChore){
+            // Make sure input is valid
+            if ((this.state.cName.trim() !== "") && (this.state.cUser.trim() !== "")) {
+                this.setState({
+                    cList: [...this.state.cList, {c: this.state.cName.trim(), u: this.state.cUser.trim()}],
+                    cName: "",
+                    cUser: "",
+                    newChore: false,
+                })
+            }
+            else{
+                alert("Invalid chore! Please put in a valid chore name and assignee")
+            }
+        }
+        else{
+            this.setState({
+                newChore: true,
+            })
+        }
+    }
+
+    validate(evt) {
+        var theEvent = evt || window.event;
+      
+        // Handle key press
+        var key = theEvent.keyCode || theEvent.which;
+        key = String.fromCharCode(key);
+        var regex = /[0-9]|\./;
+        if( !regex.test(key) ) {
+          theEvent.returnValue = false;
+          if(theEvent.preventDefault) theEvent.preventDefault();
+        }
+      }
 
     
 
@@ -59,8 +111,152 @@ export default class GroupSettings extends React.Component {
             CHdisp = "block"
         }
 
+        var Rread = this.state.editR;
+        var rAllPay = parseFloat(this.state.rPay1) + parseFloat(this.state.rPay2) + parseFloat(this.state.rPay3);
+
+        var rDiv = (
+            <div className="secDiv">
+            <Typography>Rent</Typography>
+            <List>
+                <ListItem key="0">
+                    <ListItemText primary="Total Rent Due"/>
+                    <ListItemSecondaryAction>
+                        <Typography>${this.state.rTotal}</Typography>
+                    </ListItemSecondaryAction>
+                </ListItem>
+                <ListItem key="1">
+                    <ListItemText primary="Next Rent Due Date"/>
+                    <ListItemSecondaryAction>
+                        <Typography>{this.state.rDue}</Typography>
+                    </ListItemSecondaryAction>
+                </ListItem>
+            </List>
+            <Typography>Pay Distirbution</Typography>
+            <List>
+                <ListItem key="0" dense>
+                    <ListItemText primary="Stephanie Liu"/>
+                    <ListItemSecondaryAction>
+                        <Typography>${this.state.rPay1}</Typography>
+                    </ListItemSecondaryAction>
+                </ListItem>
+                <ListItem key="1" dense>
+                    <ListItemText primary="Andy Smith"/>
+                    <ListItemSecondaryAction>
+                        <Typography>${this.state.rPay2}</Typography>
+                    </ListItemSecondaryAction>
+                </ListItem>
+                <ListItem key="2" dense>
+                    <ListItemText primary="Bob Doe"/>
+                    <ListItemSecondaryAction>
+                        <Typography>${this.state.rPay3}</Typography>
+                    </ListItemSecondaryAction>
+                </ListItem>
+                </List>
+                <Divider/>
+                <List>
+                <ListItem key="3">
+                    <ListItemText primary="Total"/>
+                    <ListItemSecondaryAction>
+                        <Typography>${rAllPay}</Typography>
+                    </ListItemSecondaryAction>
+                </ListItem>                                                                   
+            </List>
+
+            <Button id="editBtn" onClick={this.changeR}>Edit Rent</Button>
+            
+            </div>
+        )
+
+        if (!Rread){
+            rDiv = (
+                <div className="secDiv">
+                <Typography>Rent</Typography>
+                <List>
+                    <ListItem key="0">
+                        <ListItemText primary="Total Rent Due"/>
+                        <ListItemSecondaryAction>
+                            <TextField
+                            defaultValue={this.state.rTotal}
+                            onKeyPress={(event) => this.validate(event)}
+                            onChange={(event) => this.setState({rTotal: event.target.value})}
+                            InputProps={{
+                                startAdornment: <InputAdornment position="start">$</InputAdornment>,
+                            }}
+                            />
+                        </ListItemSecondaryAction>
+                    </ListItem>
+                    <ListItem key="1">
+                        <ListItemText primary="Next Rent Due Date"/>
+                        <ListItemSecondaryAction>
+                            <input type="date" 
+                            defaultValue={this.state.rDue}
+                            onChange={(event) => this.setState({rDue: event.target.value})}
+                            />
+                        </ListItemSecondaryAction>
+                    </ListItem>
+                </List>
+                <Typography>Pay Distirbution</Typography>
+                <List>
+                    <ListItem key="0" dense>
+                        <ListItemText primary="Stephanie Liu"/>
+                        <ListItemSecondaryAction>
+                            <TextField
+                            defaultValue={this.state.rPay1}
+                            onKeyPress={(event) => this.validate(event)}
+                            onChange={(event) => this.setState({rPay1: event.target.value})}
+                            InputProps={{
+                                startAdornment: <InputAdornment position="start">$</InputAdornment>,
+                            }}
+                            />
+                        </ListItemSecondaryAction>
+                    </ListItem>
+                    <ListItem key="1" dense>
+                        <ListItemText primary="Andy Smith"/>
+                        <ListItemSecondaryAction>
+                            <TextField
+                            defaultValue={this.state.rPay2}
+                            onKeyPress={(event) => this.validate(event)}
+                            onChange={(event) => this.setState({rPay2: event.target.value})}
+                            InputProps={{
+                                startAdornment: <InputAdornment position="start">$</InputAdornment>,
+                            }}
+                            />
+                        </ListItemSecondaryAction>
+                    </ListItem>
+                    <ListItem key="2" dense>
+                        <ListItemText primary="Bob Doe"/>
+                        <ListItemSecondaryAction>
+                            <TextField
+                            defaultValue={this.state.rPay3}
+                            onKeyPress={(event) => this.validate(event)}
+                            onChange={(event) => this.setState({rPay3: event.target.value})}
+                            InputProps={{
+                                startAdornment: <InputAdornment position="start">$</InputAdornment>,
+                            }}
+                            />
+                        </ListItemSecondaryAction>
+                    </ListItem>
+                    </List>
+                    <Divider/>
+                    <List>
+                    <ListItem key="3">
+                        <ListItemText primary="Total"/>
+                        <ListItemSecondaryAction>
+                            <Typography>${rAllPay}</Typography>
+                        </ListItemSecondaryAction>
+                    </ListItem>                                                                   
+                </List>
+    
+                <Button id="editBtn" onClick={this.changeR}>Save Changes</Button>
+                
+                </div>
+            )
+        }
+
+        
+
         return (
-            <div>
+            <div id="mobile-view-container">
                 <div className="secDiv">
                     <Avatar alt="Remy Sharp" src={myProfilePic} id="group-pic" />
                     <br/>
@@ -137,97 +333,41 @@ export default class GroupSettings extends React.Component {
                 <div className="secDiv">
                     <Typography>Chores</Typography>
                     <List dense>
-                        <ListItem key="0" dense>
-                            <ListItemText primary="Clean Upstairs Bathroom"
-                            secondary="Andy Smith"/>
-                            <ListItemSecondaryAction>
-                                <Button>Edit Chore</Button>
-                            </ListItemSecondaryAction>
-                        </ListItem>
-                        <ListItem key="3" dense>
-                            <ListItemText primary="Clean Common Room"
-                            secondary="Andy Smith"/>
-                            <ListItemSecondaryAction>
-                                <Button>Edit Chore</Button>
-                            </ListItemSecondaryAction>
-                        </ListItem> 
-                        <ListItem key="1" dense>
-                            <ListItemText primary="Clean Kitchen"
-                            secondary="Bob Doe"/>
-                            <ListItemSecondaryAction>
-                                <Button>Edit Chore</Button>
-                            </ListItemSecondaryAction>
-                        </ListItem>
-                        <ListItem key="2" dense>
-                            <ListItemText primary="Take out Trash"
-                            secondary="Stephanie Liu"/>
-                            <ListItemSecondaryAction>
-                                <Button>Edit Chore</Button>
-                            </ListItemSecondaryAction>
-                        </ListItem>                                                                     
+                        {this.state.cList.map((value) => {
+                            return (
+                                <ListItem key={value.c} dense>
+                                <ListItemText primary={value.c}
+                                secondary={value.u}/>
+                                <ListItemSecondaryAction>
+                                    <Button>Edit Chore</Button>
+                                </ListItemSecondaryAction>
+                            </ListItem>
+                            )
+                        })}                                                                   
                     </List>
 
                     <div style={{display: `${CHdisp}`}}>
                         <TextField id="chore-input" 
-                        label="Chore Name" variant="outlined"/>
+                        label="Chore Name" variant="outlined"
+                        value={this.state.cName}
+                        onChange={(event) => this.setState({cName: event.target.value})}/>
                         <br/>
                         <br/>
-                        <TextField id="chore-input" 
-                        label="Chore Assignee" variant="outlined"/>
+                        <Select
+                            id="chore-sel"
+                            value={this.state.cUser}
+                            onChange={(event) => this.setState({cUser: event.target.value})}
+                            >
+                            <MenuItem value={"Stephanie Liu"}>Stephanie Liu</MenuItem>
+                            <MenuItem value={"Andy Smith"}>Andy Smith</MenuItem>
+                            <MenuItem value={"Bob Doe"}>Bob Doe</MenuItem>
+                        </Select>
                     </div>
 
                     <Button id="editBtn" onClick={this.changeChore}>{CHtxt}</Button>
                 </div>
 
-                <div className="secDiv">
-                    <Typography>Rent</Typography>
-                    <List>
-                        <ListItem key="0">
-                            <ListItemText primary="Total Rent Due"/>
-                            <ListItemSecondaryAction>
-                                <Typography>$1800</Typography>
-                            </ListItemSecondaryAction>
-                        </ListItem>
-                        <ListItem key="1">
-                            <ListItemText primary="Next Rent Due Date"/>
-                            <ListItemSecondaryAction>
-                                <Typography>December 1st</Typography>
-                            </ListItemSecondaryAction>
-                        </ListItem>
-                    </List>
-                    <Typography>Pay Distirbution</Typography>
-                    <List>
-                        <ListItem key="0" dense>
-                            <ListItemText primary="Stephanie Liu"/>
-                            <ListItemSecondaryAction>
-                                <Typography>$600</Typography>
-                            </ListItemSecondaryAction>
-                        </ListItem>
-                        <ListItem key="1" dense>
-                            <ListItemText primary="Andy Smith"/>
-                            <ListItemSecondaryAction>
-                                <Typography>$650</Typography>
-                            </ListItemSecondaryAction>
-                        </ListItem>
-                        <ListItem key="2" dense>
-                            <ListItemText primary="Bob Doe"/>
-                            <ListItemSecondaryAction>
-                                <Typography>$550</Typography>
-                            </ListItemSecondaryAction>
-                        </ListItem>
-                        </List>
-                        <Divider/>
-                        <List>
-                        <ListItem key="3">
-                            <ListItemText primary="Total"/>
-                            <ListItemSecondaryAction>
-                                <Typography>$1800</Typography>
-                            </ListItemSecondaryAction>
-                        </ListItem>                                                                   
-                    </List>
-
-                    <Button id="editBtn">Edit Rent</Button>
-                </div>
+                {rDiv}
 
             </div>
         )
