@@ -5,8 +5,8 @@ import 'react-svg-radar-chart/build/css/index.css'
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import ArrowForward from '@material-ui/icons/ArrowForward';
-
-import MyProfileCard from './my-profile-card'
+import MyProfileCard from './my-profile-card';
+import {Link} from "react-router-dom";
 
 export default class SummaryCreateProfile extends React.Component{
     render() {
@@ -27,7 +27,7 @@ export default class SummaryCreateProfile extends React.Component{
                                 variant="contained"
                                 color="primary"
                                 endIcon={<ArrowForward></ArrowForward>}
-                                href="http://localhost:3000/#/profile-feed"
+                                component={Link} to={"/profile-feed"}
                             >
                                 Next
                             </Button>
