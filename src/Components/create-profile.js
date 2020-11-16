@@ -8,7 +8,7 @@ import Grid from '@material-ui/core/Grid';
 import AndroidPhone from '@material-ui/icons/PhoneAndroid';
 import MailOutline from '@material-ui/icons/MailOutline';
 import AssignmentInd from '@material-ui/icons/AssignmentInd';
-import CardMembershipIcon from '@material-ui/icons/CardMembership';
+import School from '@material-ui/icons/School';
 import Divider from '@material-ui/core/Divider';
 import FormControl from '@material-ui/core/FormControl';
 import FormGroup from '@material-ui/core/FormGroup';
@@ -154,7 +154,7 @@ export default class CreateProfile extends React.Component {
                         <div className="contact-info-container">
                             <Grid container spacing={1} alignItems="flex-end">
                                 <Grid item>
-                                    <AndroidPhone />
+                                    <AndroidPhone color= "primary"/>
                                 </Grid>
                                 <Grid item>
                                     <TextField id="phone-input" label="Phone #"
@@ -162,7 +162,7 @@ export default class CreateProfile extends React.Component {
                                     />
                                 </Grid>
                                 <Grid item>
-                                    <MailOutline />
+                                    <MailOutline color= "primary"/>
                                 </Grid>
                                 <Grid item>
                                     <TextField id="email-input" label="Email"
@@ -174,7 +174,7 @@ export default class CreateProfile extends React.Component {
                         <div className="school-info-container">
                             <Grid container spacing={1} alignItems="flex-end">
                                 <Grid item>
-                                    <CardMembershipIcon />
+                                    <School color= "primary"/>
                                 </Grid>
                                 <Grid item>
                                     <TextField id="degree-input" label="Degree"
@@ -185,7 +185,7 @@ export default class CreateProfile extends React.Component {
                                     />
                                 </Grid>
                                 <Grid item>
-                                    <AssignmentInd />
+                                    <AssignmentInd color= "primary"/>
                                 </Grid>
                                 <Grid item>
                                     <TextField id="student-num-input" label="Student #"
