@@ -8,6 +8,7 @@ import ProfileFeed from "./Components/ProfileFeed"
 import SummaryCreateProfile from './Components/summary-create-profile'
 import UserSettings from './Components/user-settings'
 import GroupSettings from './Components/group-settings'
+import SSO from './Components/sso'
 
 
 
@@ -26,6 +27,7 @@ class App extends React.Component {
               <Route exact path="/profile-feed" component={ProfileFeed} />
               <Route exact path="/user-settings" component={UserSettings} />
               <Route exact path="/group-settings" component={GroupSettings} />
+              <Route exact path="/sso" component={SSO}/>
             </Switch>
           </div>
         </Router>

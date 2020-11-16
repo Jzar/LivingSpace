@@ -172,15 +172,17 @@ export default class UserSettings extends React.Component {
         }
 
         return (
-            <div>
+            <div id="mobile-view-container">
                 <div className="secDiv">
-                    <Avatar alt="Remy Sharp" src={myProfilePic} id="my-profile-pic" />
+                    <Avatar alt="Remy Sharp" src={myProfilePic} id="user-pic" />
                     <Button id="editBtn">Edit Profile Picture</Button>
-                </div>
+                    <br/>
 
-                <div className="secDiv">
                     <TextField id="name-input" label="Name"
                         defaultValue="Stephanie Liu" variant="outlined"
+                        InputProps={{
+                            readOnly: PIread,
+                        }}
                     />
                     <br/>
                     <br/>
@@ -255,10 +257,6 @@ export default class UserSettings extends React.Component {
                                 control={<Checkbox color="primary" checked={this.state.university_gardens} onChange={this.handleChange} name="university_gardens" disabled={LPread} />}
                                 label="University Gardens"
                             />
-                        </FormGroup>
-                    </FormControl>
-                    <FormControl variant="outlined">
-                        <FormGroup>
                             <FormControlLabel
                                 control={<Checkbox color="primary" checked={this.state.westdale} onChange={this.handleChange} name="westdale" disabled={LPread} />}
                                 label="Westdale"
