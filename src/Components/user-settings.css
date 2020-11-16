@@ -1,0 +1,34 @@
+.secDiv {
+    border-color: black;
+    border-style: solid;
+    padding: 10px;
+    margin: 20px 0px;
+}
+
+#my-profile-pic{
+    margin: 10px auto;
+}
+
+#editBtn{
+    width:80%;
+    margin: 10px auto;
+}
+
+input#name-input {
+    text-align: center;
+    margin: 4px 10px;
+}
+
+input#phone-input {
+    padding: 8px 0px 4px 4px;
+    width: 90px;
+font-size: revert;
+  }
+  
+#email-input {
+    padding: 4px;
+    padding-top: 8px;
+    width: 125px;
+    font-size: revert;
+}
+  
