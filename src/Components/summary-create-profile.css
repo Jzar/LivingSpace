@@ -1,0 +1,11 @@
+.create-profile-divider {
+    margin: 20px 16px !important;
+    background-color: none !important;
+}
+
+#summary-create-profile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}

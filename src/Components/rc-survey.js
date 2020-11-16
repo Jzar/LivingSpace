@@ -126,7 +126,7 @@ export default class RCSurvey extends React.Component {
                             variant="contained"
                             color="primary"
                             endIcon={<ArrowForward></ArrowForward>}
-                            href="http://localhost:3000/#/create-profile"
+                            href="http://localhost:3000/#/summary-create-profile"
                         >
                             Next
                         </Button>

@@ -84,18 +84,17 @@ class ProfileFeed extends React.Component{
 
         return(
        
-            <div id="mobile-view-container">
-                <div className= "feed-contatiner">
-                
-                    <div id="all-cards">
-                        <ProfileCard />
-                        <ProfileCard1/>
-                        <ProfileCard2/>
-                        <ProfileCard3/>
+            
+            <div className= "feed-contatiner">
+               
+                <div id="all-cards">
+                    <ProfileCard />
+                    <ProfileCard1/>
+                    <ProfileCard2/>
+                    <ProfileCard3/>
 
-                    </div>
-                
                 </div>
+               
              </div>
             
         );
