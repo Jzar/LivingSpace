@@ -5,7 +5,6 @@ import "./ProfileFeed.css";
 import {Card, CardContent,  Typography, Avatar,IconButton} from "@material-ui/core"
 import {Wc, LocationOn, AttachMoney, School} from "@material-ui/icons"
 import user1 from "../resources/my-user-profile.png";
-import ChatIcon from '@material-ui/icons/Chat';
 
 const character_data = [
     {
