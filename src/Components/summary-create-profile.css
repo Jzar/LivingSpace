@@ -12,8 +12,13 @@
 
 .icons-container {
     text-align: left;
+
 }
 
 svg.MuiSvgIcon-root.school-icon-container.MuiSvgIcon-colorPrimary {
     padding-right: 8px;
+}
+
+.account-attribute-container {
+    display: flex;
 }
