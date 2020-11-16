@@ -2,7 +2,7 @@ import React from 'react';
 import 'react-svg-radar-chart/build/css/index.css'
 import RadarChart from 'react-svg-radar-chart';
 import "./ProfileFeed.css";
-import {Card, CardContent,  Typography, Avatar,IconButton} from "@material-ui/core"
+import {Card, CardContent,  Typography, Avatar } from "@material-ui/core"
 import {Wc, LocationOn, AttachMoney, School} from "@material-ui/icons"
 import user1 from "../resources/my-user-profile.png";
 

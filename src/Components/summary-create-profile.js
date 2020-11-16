@@ -20,7 +20,7 @@ export default class SummaryCreateProfile extends React.Component{
                         <h3>Account Summary</h3>
                         <MyProfileCard />
                     </div>
-                    <div className="create-profile-divider" >
+                    <div className="create-profile-divider-1" >
                         <Divider className='create-profile-divider' />
                         <div className="navigate-next-container">
                             <Button
