@@ -10,7 +10,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Paper from '@material-ui/core/Paper'
 import NavBar from "./nav-bar";
-
+import {Link} from "react-router-dom";
 
 
 // Icons and Images
@@ -239,7 +239,8 @@ export default class UserSettings extends React.Component {
                             />
                         </Grid>
                     </Grid>
-                    <Button id="editBtn" onClick={this.changePI}>{PItxt}</Button>
+                    <Button color="primary" variant="contained"
+                    id="editBtn" onClick={this.changePI}>{PItxt}</Button>
                 </Paper>
 
                 <Paper id="pDiv">
@@ -276,11 +277,14 @@ export default class UserSettings extends React.Component {
                         </FormGroup>
                         
                     </FormControl>
-                    <Button id="editBtn" onClick={this.changeLP}>{LPtxt}</Button>
+                    <Button color="primary" variant="contained"
+                    id="editBtn" onClick={this.changeLP}>{LPtxt}</Button>
                 </Paper>
 
                 <Paper id="pDiv">
-                    <Button id="editBtn">Retake RCI Survey</Button>
+                    <Button color="primary" variant="contained"
+                    component={Link} to={"/rc-survey"}
+                    id="editBtn">Retake RCI Survey</Button>
                 </Paper>
                 <br/>
                 <br/>
