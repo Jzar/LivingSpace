@@ -18,7 +18,7 @@ export default class SSO extends React.Component {
                 <br/>
                 <Paper id="pDiv"  elevation={0}>
                     <br/>
-                    <Typography variant="h3">Livingspace</Typography>
+                    <Typography variant="h3">LivingSpace</Typography>
                     <Typography>McMaster Roommate Finder</Typography>
                 <br/>
                 </Paper>
