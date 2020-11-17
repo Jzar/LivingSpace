@@ -60,31 +60,33 @@ export default function ProfileCard2() {
                 
             </div>
             <CardContent>
-                <div className="bullet-list-container" style={{display: "flex", justifyContent: "space-between"}}>
-                    <div  className ="icons-container" style={{width: "10%", height:"100%"}}>
-                        <Wc className="gender-icon-container" color= "primary"/> 
-                        <LocationOn className="location-icon-container" color= "primary"/> 
-                        <AttachMoney className="money-icon-container" color= "primary"/> 
-                        <School className="school-icon-container" color= "primary"/> 
-                    </div>
-                    <div className="all-text-container" style={{width:"60%", height:"100%"}}> 
-                        <div>
-                            <Typography className="gender-text-container"> <span style={{fontWeight:"bold"}}>Male | 22 </span></Typography>
-                            <Typography className="location-text-container"> <span style={{fontWeight:"bold"}}>University Gardens</span></Typography> 
-                            <Typography className="budget-text-container"> <span style={{fontWeight:"bold"}}>$300-$700</span> </Typography>
-                            <Typography className="location-text-container"> <span style={{fontWeight:"bold"}}>COMMERCE IV</span></Typography> 
+            <div className="bullet-list-container" style={{display: "flex", justifyContent: "space-between"}}>
+                    <div  className ="icons-container" style={{width: "60%", height:"100%"}}>
+                        <div className="account-attribute-container">
+                            <Wc className="gender-icon-container" color= "primary"/> 
+                            <span style={{fontWeight:"bold"}}>Male | 22 </span>
                         </div>
-                                                            
-                    
-                </div>
-                <div className ="percentage-preview-container" >
-                     <RadarChart
-                        captions={captions}
-                        data={character_data}
-                        size={120}
-                    />   
-                </div>
-                    
+                        <div className="account-attribute-container">
+                            <LocationOn className="location-icon-container" color= "primary"/> 
+                            <span style={{fontWeight:"bold"}}>Ainslie Wood East, Ainslie Wood South, Ainslie Wood</span>
+                        </div>
+                        <div className="account-attribute-container">
+                            <AttachMoney className="money-icon-container" color= "primary"/>
+                            <span style={{fontWeight:"bold"}}>$700</span>
+                        </div>
+                        <div className="account-attribute-container">
+                            <School className="school-icon-container" color= "primary"/> 
+                            <span style={{fontWeight:"bold"}}>COMMERCE IV</span>
+                        </div>
+                    </div>
+                    <div className ="percentage-preview-container" >
+                        <RadarChart
+                            captions={captions}
+                            data={character_data}
+                            size={120}
+                        />   
+                    </div>
+                        
                 </div>
 
                 <div className="chat-button-container">
