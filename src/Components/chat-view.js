@@ -25,6 +25,12 @@ const messages = [];
 
 messages.push(generateMessage(`You've got to be kidding me`, 2));
 messages.push(generateMessage(`Is this in the budget?`, 3,  {image:'https://static.dezeen.com/uploads/2020/02/house-in-the-landscape-niko-arcjitect-architecture-residential-russia-houses-khurtin_dezeen_2364_hero.jpg'}));
+messages.push(generateMessage(`My budget is $500 a month
+
+what do you think about that? What's yours`, 2, ));
+messages.push(generateMessage(`I saw we had a similar Roomate compatibility index, would you want to look for a place together?`, 2));
+
+messages.push(generateMessage(`Hi! I'm Michael, how's it going?`, 2));
 
 
 messages.push(generateMessage('You both have started a chat', 2, {system: true}));

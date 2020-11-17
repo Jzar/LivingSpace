@@ -42,15 +42,13 @@ class CustomChat extends Component{
                 <ArrowBackIcon fontSize="large"/>
                 </IconButton>
                 </div>
-                <div style={styles.rightDiv}>
                 <h1>{this.state.name}</h1>
                 <hr>
                 </hr>
-                </div>
             </div>
             <GiftedChat user={{id: 1,}}
                         messages={this.state.messages}
-                        onSend={this.onSend}/>
+                        onSend={this.onSend}/>           
             </div>
         </div>
         );
