@@ -39,7 +39,7 @@ const captions = {
             pandemic_precautions: 'Covid'
 };
 
-const avatar_large = { height: '8vh', width: '8vh'}
+const avatar_large = { height: '100px', width: '100px'}
 
 export default function ProfileCard1() {
 
@@ -53,7 +53,7 @@ export default function ProfileCard1() {
                 </div>
 
                 <div className="RCI-container">
-                    <Avatar id="avatar1" aria-label="recipe" className={avatar_large}>
+                    <Avatar id="avatar1" aria-label="recipe">
                         74%
                     </Avatar>
                 </div>                    

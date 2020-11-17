@@ -1,7 +1,8 @@
 div#my-profile-pic {
     width: 90px;
     height: 90px;
-    margin: 12px 0px;
+    margin: 100px;
+    margin: auto;
 }
   
 img.MuiAvatar-img {

@@ -203,6 +203,7 @@ export default class CreateProfile extends React.Component {
                     <Divider className='create-profile-divider' />
                     <div className="map-container">
                         <FormLabel component="legend">Location Preference</FormLabel>
+                        <FormHelperText>Select 3 locations</FormHelperText>
                         <div>
                             <FormControl variant="outlined">
                                 <FormGroup>
@@ -242,7 +243,6 @@ export default class CreateProfile extends React.Component {
                                 
                             </FormControl>
                         </div>
-                        <FormHelperText>Select 3 locations</FormHelperText>
                         {/* <PinchToZoom>
                             <img src={McMaster_Sectors} alt="McMaster Sectors"></img>
                         </PinchToZoom>  */}

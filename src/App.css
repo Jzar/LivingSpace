@@ -54,7 +54,17 @@
     top: 648px;
     justify-content: space-between;
     width: inherit;
-    background: white;
+    background: #dae0ff;
+}
+
+#pDiv {
+    width: 90%;
+    margin: 20px auto;
+    padding: 5px;
+}
+
+.primarybg{
+    background-color: #dae0ff;
 }
 
 /* width */
