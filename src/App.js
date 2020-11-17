@@ -29,8 +29,11 @@ class App extends React.Component {
               <Route exact path="/user-settings" component={UserSettings} />
               <Route exact path="/group-settings" component={GroupSettings} />
               <Route exact path="/sso" component={SSO}/>
+              <Route exact path="/chat" component={ChatView}/>
+              <Route exact path="/group" component={ChatView}/>
+              <Route exact path="/1" component={ChatView}/>
+              <Route exact path="/g1" component={ChatView}/>
             </Switch>
-            <ChatView />
           </div>
         </Router>
       </div>
