@@ -206,19 +206,19 @@ export default class CreateProfile extends React.Component {
                         <div>
                             <FormControl variant="outlined">
                                 <FormGroup>
-                                    <FormControlLabel
+                                    <FormControlLabel className="location-checkbox"
                                         control={<Checkbox color="primary" checked={this.state.ainslie_wood} onChange={this.handleChange} name="ainslie_wood" />}
                                         label="Ainslie Wood"
                                     />
-                                    <FormControlLabel
+                                    <FormControlLabel className="location-checkbox"
                                         control={<Checkbox color="primary" checked={this.state.ainslie_wood_east} onChange={this.handleChange} name="ainslie_wood_east" />}
                                         label="Ainslie Wood East"
                                     />
-                                    <FormControlLabel
+                                    <FormControlLabel className="location-checkbox"
                                         control={<Checkbox color="primary" checked={this.state.ainslie_wood_north} onChange={this.handleChange} name="ainslie_wood_north" />}
                                         label="Ainslie Wood North"
                                     />
-                                    <FormControlLabel
+                                    <FormControlLabel className="location-checkbox"
                                         control={<Checkbox color="primary" checked={this.state.university_gardens} onChange={this.handleChange} name="university_gardens" />}
                                         label="University Gardens"
                                     />
@@ -226,15 +226,15 @@ export default class CreateProfile extends React.Component {
                             </FormControl>
                             <FormControl variant="outlined">
                                 <FormGroup>
-                                    <FormControlLabel
+                                    <FormControlLabel className="location-checkbox"
                                         control={<Checkbox color="primary" checked={this.state.westdale} onChange={this.handleChange} name="westdale" />}
                                         label="Westdale"
                                     />
-                                    <FormControlLabel
+                                    <FormControlLabel className="location-checkbox"
                                         control={<Checkbox color="primary" checked={this.state.westdale_north} onChange={this.handleChange} name="westdale_north" />}
                                         label="Westdale North"
                                     />
-                                    <FormControlLabel
+                                    <FormControlLabel className="location-checkbox"
                                         control={<Checkbox color="primary" checked={this.state.westdale_south} onChange={this.handleChange} name="westdale_south" />}
                                         label="Westdale South"
                                     />

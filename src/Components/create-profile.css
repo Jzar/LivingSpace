@@ -73,3 +73,7 @@ input#student-num-input {
 #mcmaster-sector-img {
     width: 95% !important;
 }
+
+.location-checkbox span.MuiTypography-root.MuiFormControlLabel-label.MuiTypography-body1 {
+    color: black;
+}
