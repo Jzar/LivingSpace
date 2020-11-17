@@ -5,6 +5,12 @@
     margin: 20px 0px;
 }
 
+#pDiv {
+    width: 90%;
+    margin: 20px auto;
+    padding: 5px;
+}
+
 #user-pic{
     padding: 25px 25px;
     margin: auto auto;
