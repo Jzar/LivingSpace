@@ -11,6 +11,7 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Divider from '@material-ui/core/Divider';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
+import Paper from '@material-ui/core/Paper'
 import InputAdornment from '@material-ui/core/InputAdornment';
 import NavBar from "./nav-bar";
 
@@ -116,9 +117,9 @@ export default class GroupSettings extends React.Component {
         var rAllPay = parseFloat(this.state.rPay1) + parseFloat(this.state.rPay2) + parseFloat(this.state.rPay3);
 
         var rDiv = (
-            <div className="secDiv">
+            <Paper id="pDiv">
             <Typography>Rent</Typography>
-            <List>
+            <List id="gList">
                 <ListItem key="0">
                     <ListItemText primary="Total Rent Due"/>
                     <ListItemSecondaryAction>
@@ -133,7 +134,7 @@ export default class GroupSettings extends React.Component {
                 </ListItem>
             </List>
             <Typography>Pay Distirbution</Typography>
-            <List>
+            <List id="gList">
                 <ListItem key="0" dense>
                     <ListItemText primary="Stephanie Liu"/>
                     <ListItemSecondaryAction>
@@ -154,7 +155,7 @@ export default class GroupSettings extends React.Component {
                 </ListItem>
                 </List>
                 <Divider/>
-                <List>
+                <List id="gList">
                 <ListItem key="3">
                     <ListItemText primary="Total"/>
                     <ListItemSecondaryAction>
@@ -163,16 +164,17 @@ export default class GroupSettings extends React.Component {
                 </ListItem>                                                                   
             </List>
 
-            <Button id="editBtn" onClick={this.changeR}>Edit Rent</Button>
+            <Button id="editBtn" onClick={this.changeR}
+            color="primary" variant="contained">Edit Rent</Button>
             
-            </div>
+            </Paper>
         )
 
         if (!Rread){
             rDiv = (
-                <div className="secDiv">
+                <Paper id="pDiv">
                 <Typography>Rent</Typography>
-                <List>
+                <List id="gList">
                     <ListItem key="0">
                         <ListItemText primary="Total Rent Due"/>
                         <ListItemSecondaryAction>
@@ -183,6 +185,7 @@ export default class GroupSettings extends React.Component {
                             InputProps={{
                                 startAdornment: <InputAdornment position="start">$</InputAdornment>,
                             }}
+                            id="moneyInput"
                             />
                         </ListItemSecondaryAction>
                     </ListItem>
@@ -197,7 +200,7 @@ export default class GroupSettings extends React.Component {
                     </ListItem>
                 </List>
                 <Typography>Pay Distirbution</Typography>
-                <List>
+                <List id="gList">
                     <ListItem key="0" dense>
                         <ListItemText primary="Stephanie Liu"/>
                         <ListItemSecondaryAction>
@@ -208,6 +211,7 @@ export default class GroupSettings extends React.Component {
                             InputProps={{
                                 startAdornment: <InputAdornment position="start">$</InputAdornment>,
                             }}
+                            id="moneyInput"
                             />
                         </ListItemSecondaryAction>
                     </ListItem>
@@ -221,6 +225,7 @@ export default class GroupSettings extends React.Component {
                             InputProps={{
                                 startAdornment: <InputAdornment position="start">$</InputAdornment>,
                             }}
+                            id="moneyInput"
                             />
                         </ListItemSecondaryAction>
                     </ListItem>
@@ -234,12 +239,13 @@ export default class GroupSettings extends React.Component {
                             InputProps={{
                                 startAdornment: <InputAdornment position="start">$</InputAdornment>,
                             }}
+                            id="moneyInput"
                             />
                         </ListItemSecondaryAction>
                     </ListItem>
                     </List>
                     <Divider/>
-                    <List>
+                    <List id="gList">
                     <ListItem key="3">
                         <ListItemText primary="Total"/>
                         <ListItemSecondaryAction>
@@ -248,17 +254,18 @@ export default class GroupSettings extends React.Component {
                     </ListItem>                                                                   
                 </List>
     
-                <Button id="editBtn" onClick={this.changeR}>Save Changes</Button>
+                <Button id="editBtn" onClick={this.changeR}
+                color="primary" variant="contained">Save Changes</Button>
                 
-                </div>
+                </Paper>
             )
         }
 
         
 
         return (
-            <div id="mobile-view-container">
-                <div className="secDiv">
+            <div id="mobile-view-container" class="secondarybg">
+                <Paper id="pDiv">
                     <Avatar alt="Remy Sharp" src={myProfilePic} id="group-pic" />
                     <br/>
                     <TextField id="name-input" label="Group Name"
@@ -267,19 +274,20 @@ export default class GroupSettings extends React.Component {
                             readOnly: GNread,
                         }}
                     />
-                    <Button id="editBtn" onClick={this.changeGN}>{GNtxt}</Button>
-                </div>
+                    <Button id="editBtn" onClick={this.changeGN}
+                    color="primary" variant="contained">{GNtxt}</Button>
+                </Paper>
 
-                <div className="secDiv">
+                <Paper id="pDiv">
                     <Typography>Group Members</Typography>
-                    <List dense>
-                        <ListItem key="0">
+                    <List dense id="gList">
+                        <ListItem key="0" >
                             <ListItemAvatar>
                                 <Avatar>S</Avatar>
                             </ListItemAvatar>
                             <ListItemText primary="Stephanie Liu" />
                             <ListItemSecondaryAction>
-                                <Button>Leave Group</Button>
+                                <Button id="listBtn">Leave Group</Button>
                             </ListItemSecondaryAction>
                         </ListItem>
                         <ListItem key="1">
@@ -288,7 +296,7 @@ export default class GroupSettings extends React.Component {
                             </ListItemAvatar>
                             <ListItemText primary="Andy Smith" />
                             <ListItemSecondaryAction>
-                                <Button>Vote Kick</Button>
+                                <Button id="listBtn">Vote Kick</Button>
                             </ListItemSecondaryAction>
                         </ListItem>
                         <ListItem key="2">
@@ -297,50 +305,50 @@ export default class GroupSettings extends React.Component {
                             </ListItemAvatar>
                             <ListItemText primary="Bob Doe" />
                             <ListItemSecondaryAction>
-                                <Button>Vote Kick</Button>
+                                <Button id="listBtn">Vote Kick</Button>
                             </ListItemSecondaryAction>
                         </ListItem>
                     </List>
-                </div>
+                </Paper>
 
-                <div className="secDiv">
+                <Paper id="pDiv">
                     <Typography>Events</Typography>
 
-                    <List dense>
+                    <List dense id="gList">
                         <ListItem key="0">
                             <ListItemText primary="3Y03 Midterm" secondary="November 10th 2020"/>
                             <ListItemSecondaryAction>
-                                <Button>Edit Event</Button>
+                                <Button id="listBtn">Edit Event</Button>
                             </ListItemSecondaryAction>
                         </ListItem>
                         <ListItem key="1">
                             <ListItemText primary="House Cleanup" secondary="November 13th 2020"/>
                             <ListItemSecondaryAction>
-                                <Button>Edit Event</Button>
+                                <Button id="listBtn">Edit Event</Button>
                             </ListItemSecondaryAction>
                         </ListItem>
                         <ListItem key="2">
                             <ListItemText primary="Group Study Session" secondary="November 29th 2020"/>
                             <ListItemSecondaryAction>
-                                <Button>Edit Event</Button>
+                                <Button id="listBtn">Edit Event</Button>
                             </ListItemSecondaryAction>
                         </ListItem>
                     </List>
 
-                    <Button id="editBtn">Add Event</Button>
+                    <Button id="editBtn" color="primary" variant="contained">Add Event</Button>
 
-                </div>
+                </Paper>
 
-                <div className="secDiv">
+                <Paper id="pDiv">
                     <Typography>Chores</Typography>
-                    <List dense>
+                    <List dense id="gList">
                         {this.state.cList.map((value) => {
                             return (
                                 <ListItem key={value.c} dense>
                                 <ListItemText primary={value.c}
                                 secondary={value.u}/>
                                 <ListItemSecondaryAction>
-                                    <Button>Edit Chore</Button>
+                                    <Button id="listBtn">Edit Chore</Button>
                                 </ListItemSecondaryAction>
                             </ListItem>
                             )
@@ -359,16 +367,21 @@ export default class GroupSettings extends React.Component {
                             value={this.state.cUser}
                             onChange={(event) => this.setState({cUser: event.target.value})}
                             >
-                            <MenuItem value={"Stephanie Liu"}>Stephanie Liu</MenuItem>
-                            <MenuItem value={"Andy Smith"}>Andy Smith</MenuItem>
-                            <MenuItem value={"Bob Doe"}>Bob Doe</MenuItem>
+                            <MenuItem value={"Stephanie Liu"} id="gList">Stephanie Liu</MenuItem>
+                            <MenuItem value={"Andy Smith"} id="gList">Andy Smith</MenuItem>
+                            <MenuItem value={"Bob Doe"} id="gList">Bob Doe</MenuItem>
                         </Select>
                     </div>
 
-                    <Button id="editBtn" onClick={this.changeChore}>{CHtxt}</Button>
-                </div>
+                    <Button id="editBtn" onClick={this.changeChore}
+                    color="primary" variant="contained">{CHtxt}</Button>
+                </Paper>
 
                 {rDiv}
+
+                <br/>
+                <br/>
+                <br/>
                 <div id="bottombar">
                 <NavBar url="/group-settings"/>
                 </div>

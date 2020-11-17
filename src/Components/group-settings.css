@@ -48,9 +48,22 @@
     text-align: center;
     margin: -4px 10px;   
     width: 100px;
+    background-color: white;
 }
 
 #group-pic{
     padding: 25px 25px;
     margin: auto auto;
+}
+
+#gList{
+    background-color: white;
+}
+
+#listBtn{
+    background-color:  #dae0ff;
+}
+
+#moneyInput{
+    width: 100px;
 }
