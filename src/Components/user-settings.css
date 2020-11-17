@@ -38,4 +38,8 @@ font-size: revert;
     width: 125px;
     font-size: revert;
 }
+
+.location-checkbox span.MuiTypography-root.MuiFormControlLabel-label.MuiTypography-body1 {
+    color: black;
+}
   

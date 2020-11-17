@@ -39,10 +39,7 @@ class ProfileFeed extends React.Component{
                     </div>
                 
                 </div>
-                <br/>
-                <br/>
-                <br/>
-                <div id="bottombar">
+                <div>
                     <NavBar url="/profile-feed"/>
                 </div>
 

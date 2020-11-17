@@ -6,6 +6,7 @@ import {Card, CardContent,  Typography, Avatar,IconButton} from "@material-ui/co
 import {Wc, LocationOn, AttachMoney, School} from "@material-ui/icons"
 import user1 from "../resources/user1.jpg";
 import ChatIcon from '@material-ui/icons/Chat';
+import {Link} from "react-router-dom";
 
 const character_data = [
     {
@@ -86,7 +87,7 @@ export default function ProfileCard() {
                 </div>
 
                 <div className="chat-button-container">
-                    <IconButton>
+                    <IconButton component={Link} to={"/1"}>
                         <ChatIcon/>
                     </IconButton>
                 </div>

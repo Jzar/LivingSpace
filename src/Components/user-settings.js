@@ -245,31 +245,31 @@ export default class UserSettings extends React.Component {
                 <Paper id="pDiv">
                     <FormControl variant="outlined">
                         <FormGroup>
-                            <FormControlLabel
+                            <FormControlLabel className="location-checkbox"
                                 control={<Checkbox color="primary" checked={this.state.ainslie_wood} onChange={this.handleChange} name="ainslie_wood" disabled={LPread} />}
                                 label="Ainslie Wood"
                             />
-                            <FormControlLabel
+                            <FormControlLabel className="location-checkbox"
                                 control={<Checkbox color="primary" checked={this.state.ainslie_wood_east} onChange={this.handleChange} name="ainslie_wood_east" disabled={LPread} />}
                                 label="Ainslie Wood East"
                             />
-                            <FormControlLabel
+                            <FormControlLabel className="location-checkbox"
                                 control={<Checkbox color="primary" checked={this.state.ainslie_wood_north} onChange={this.handleChange} name="ainslie_wood_north" disabled={LPread} />}
                                 label="Ainslie Wood North"
                             />
-                            <FormControlLabel
+                            <FormControlLabel className="location-checkbox"
                                 control={<Checkbox color="primary" checked={this.state.university_gardens} onChange={this.handleChange} name="university_gardens" disabled={LPread} />}
                                 label="University Gardens"
                             />
-                            <FormControlLabel
+                            <FormControlLabel className="location-checkbox"
                                 control={<Checkbox color="primary" checked={this.state.westdale} onChange={this.handleChange} name="westdale" disabled={LPread} />}
                                 label="Westdale"
                             />
-                            <FormControlLabel
+                            <FormControlLabel className="location-checkbox"
                                 control={<Checkbox color="primary" checked={this.state.westdale_north} onChange={this.handleChange} name="westdale_north" disabled={LPread} />}
                                 label="Westdale North"
                             />
-                            <FormControlLabel
+                            <FormControlLabel className="location-checkbox"
                                 control={<Checkbox color="primary" checked={this.state.westdale_south} onChange={this.handleChange} name="westdale_south" disabled={LPread} />}
                                 label="Westdale South"
                             />
