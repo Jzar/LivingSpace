@@ -43,9 +43,18 @@
 #mobile-view-container {
   width: 375px;
   height: 667px;
-  overflow: scroll;
+  overflow-y: scroll;
   border: 2px solid black;
-  border-radius: 1px;
+  border-radius: 5px;
+  margin: 10%;
+}
+
+#bottombar{
+    position: absolute;
+    top: 648px;
+    justify-content: space-between;
+    width: inherit;
+    background: white;
 }
 
 /* width */

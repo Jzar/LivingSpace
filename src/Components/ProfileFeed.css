@@ -1,5 +1,11 @@
 
-
+#bottombar{
+    position: absolute;
+    top: 648px;
+    justify-content: space-between;
+    width: inherit;
+    background: white;
+}
 
 
 .radar-chart{

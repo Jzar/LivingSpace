@@ -30,7 +30,6 @@ class App extends React.Component {
               <Route exact path="/group-settings" component={GroupSettings} />
               <Route exact path="/sso" component={SSO}/>
             </Switch>
-            <ChatView />
           </div>
         </Router>
       </div>

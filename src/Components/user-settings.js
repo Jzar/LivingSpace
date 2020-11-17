@@ -280,7 +280,7 @@ export default class UserSettings extends React.Component {
                 <div className="secDiv">
                     <Button id="editBtn">Retake RCI Survey</Button>
                 </div>
-                <div>
+                <div id="bottombar">
                 <NavBar url="/user-settings"/>
                 </div>
             </div>
