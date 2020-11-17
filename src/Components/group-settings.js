@@ -18,7 +18,10 @@ import NavBar from "./nav-bar";
 
 // Icons and Images
 import './group-settings.css';
-import myProfilePic from './../resources/my-user-profile.png';
+import myGroupImg from './../resources/group-img.png';
+import Pfp1 from './../resources/my-user-profile.png';
+import Pfp2 from "../resources/user1.jpg";
+import Pfp3 from "../resources/user2.jpg";
 import { Typography } from '@material-ui/core';
 
 
@@ -32,9 +35,9 @@ export default class GroupSettings extends React.Component {
             newChore: false,
             cName: "",
             cUser: "",
-            cList: [{c: "Clean Upstairs Bathroom", u: "Andy Smith"},
-                {c: "Clean Common Room", u: "Andy Smith"},
-                {c: "Clean Kitchen", u: "Bob Doe"},
+            cList: [{c: "Clean Upstairs Bathroom", u: "Michael Moore"},
+                {c: "Clean Common Room", u: "Michael Moore"},
+                {c: "Clean Kitchen", u: "Kiersten Ross"},
                 {c: "Take out Trash", u: "Stephanie Liu"}],
             rTotal: "1800",
             rDue: "2020-11-03",
@@ -142,13 +145,13 @@ export default class GroupSettings extends React.Component {
                     </ListItemSecondaryAction>
                 </ListItem>
                 <ListItem key="1" dense>
-                    <ListItemText primary="Andy Smith"/>
+                    <ListItemText primary="Michael Moore"/>
                     <ListItemSecondaryAction>
                         <Typography>${this.state.rPay2}</Typography>
                     </ListItemSecondaryAction>
                 </ListItem>
                 <ListItem key="2" dense>
-                    <ListItemText primary="Bob Doe"/>
+                    <ListItemText primary="Kiersten Ross"/>
                     <ListItemSecondaryAction>
                         <Typography>${this.state.rPay3}</Typography>
                     </ListItemSecondaryAction>
@@ -216,7 +219,7 @@ export default class GroupSettings extends React.Component {
                         </ListItemSecondaryAction>
                     </ListItem>
                     <ListItem key="1" dense>
-                        <ListItemText primary="Andy Smith"/>
+                        <ListItemText primary="Michael Moore"/>
                         <ListItemSecondaryAction>
                             <TextField
                             defaultValue={this.state.rPay2}
@@ -230,7 +233,7 @@ export default class GroupSettings extends React.Component {
                         </ListItemSecondaryAction>
                     </ListItem>
                     <ListItem key="2" dense>
-                        <ListItemText primary="Bob Doe"/>
+                        <ListItemText primary="Kiersten Ross"/>
                         <ListItemSecondaryAction>
                             <TextField
                             defaultValue={this.state.rPay3}
@@ -266,7 +269,7 @@ export default class GroupSettings extends React.Component {
         return (
             <div id="mobile-view-container" class="secondarybg">
                 <Paper id="pDiv">
-                    <Avatar alt="Remy Sharp" src={myProfilePic} id="group-pic" />
+                    <Avatar alt="Remy Sharp" src={myGroupImg} id="group-pic" />
                     <br/>
                     <TextField id="name-input" label="Group Name"
                         defaultValue="Cool Pals" variant="outlined"
@@ -283,7 +286,7 @@ export default class GroupSettings extends React.Component {
                     <List dense id="gList">
                         <ListItem key="0" >
                             <ListItemAvatar>
-                                <Avatar>S</Avatar>
+                                <Avatar src={Pfp1}/>
                             </ListItemAvatar>
                             <ListItemText primary="Stephanie Liu" />
                             <ListItemSecondaryAction>
@@ -292,18 +295,18 @@ export default class GroupSettings extends React.Component {
                         </ListItem>
                         <ListItem key="1">
                             <ListItemAvatar>
-                                <Avatar>A</Avatar>
+                                <Avatar src={Pfp2}></Avatar>
                             </ListItemAvatar>
-                            <ListItemText primary="Andy Smith" />
+                            <ListItemText primary="Michael Moore" />
                             <ListItemSecondaryAction>
                                 <Button id="listBtn">Vote Kick</Button>
                             </ListItemSecondaryAction>
                         </ListItem>
                         <ListItem key="2">
                             <ListItemAvatar>
-                                <Avatar>B</Avatar>
+                                <Avatar src={Pfp3}></Avatar>
                             </ListItemAvatar>
-                            <ListItemText primary="Bob Doe" />
+                            <ListItemText primary="Kiersten Ross" />
                             <ListItemSecondaryAction>
                                 <Button id="listBtn">Vote Kick</Button>
                             </ListItemSecondaryAction>
@@ -368,8 +371,8 @@ export default class GroupSettings extends React.Component {
                             onChange={(event) => this.setState({cUser: event.target.value})}
                             >
                             <MenuItem value={"Stephanie Liu"} id="gList">Stephanie Liu</MenuItem>
-                            <MenuItem value={"Andy Smith"} id="gList">Andy Smith</MenuItem>
-                            <MenuItem value={"Bob Doe"} id="gList">Bob Doe</MenuItem>
+                            <MenuItem value={"Michael Moore"} id="gList">Michael Moore</MenuItem>
+                            <MenuItem value={"Kiersten Ross"} id="gList">Kiersten Ross</MenuItem>
                         </Select>
                     </div>
 
