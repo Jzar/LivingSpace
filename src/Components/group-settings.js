@@ -369,7 +369,9 @@ export default class GroupSettings extends React.Component {
                 </div>
 
                 {rDiv}
-
+                <div id="bottombar">
+                <NavBar url="/group-settings"/>
+                </div>
             </div>
         )
     }

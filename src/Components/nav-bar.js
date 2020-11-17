@@ -8,6 +8,9 @@ import PageviewOutlinedIcon from '@material-ui/icons/PageviewOutlined';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
 
+import GroupIcon from '@material-ui/icons/Group';
+import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
+
 
 import {
     Link,
@@ -35,6 +38,20 @@ import IconButton from '@material-ui/core/IconButton';
             default:
                 return(
                     <PageviewOutlinedIcon fontSize="large"/>
+
+                );
+        }
+    }
+
+    function getGroupIcon(url){
+        switch(url){
+            case "/group-settings":
+                return(
+                    <GroupIcon fontSize="large"/>
+                );
+            default:
+                return(
+                    <PeopleOutlineIcon fontSize="large"/>
 
                 );
         }
@@ -70,6 +87,11 @@ import IconButton from '@material-ui/core/IconButton';
             <div >
                 <IconButton component={Link} to={"/user-settings"} >
                     {getProfileIcon(props.url)}
+                </IconButton>
+            </div>    
+            <div >
+                <IconButton component={Link} to={"/group-settings"} >
+                    {getGroupIcon(props.url)}
                 </IconButton>
             </div>     
         </div> 

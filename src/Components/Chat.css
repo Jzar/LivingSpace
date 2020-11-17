@@ -134,3 +134,10 @@ div#chat-component {
 div#ChatBarComponent {
   border-top: groove;
 }
+
+div#chatHeader{
+    position: absolute !important;
+    z-index: 10 !important;
+    background: white !important;
+    width: 375px !important;
+}
