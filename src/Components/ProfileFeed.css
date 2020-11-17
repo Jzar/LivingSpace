@@ -144,19 +144,23 @@
    #avatar{
     background-color: rgb(21, 126, 7)!important;
     color: white !important;
+    padding: 5px;
    }
   
   #avatar1 {
       background-color: #365afa !important;
       color:white !important;
+      padding: 5px;
   }
   
   #avatar2{
     background-color: rgb(245, 161, 25)!important;
     color: white !important;
+    padding: 5px;
    }
   
    #avatar3{
     background-color: rgb(255, 0, 0)!important;
     color: white !important;
+    padding: 5px;
    }
