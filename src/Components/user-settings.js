@@ -8,7 +8,9 @@ import FormControl from '@material-ui/core/FormControl';
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
+import Paper from '@material-ui/core/Paper'
 import NavBar from "./nav-bar";
+
 
 
 // Icons and Images
@@ -175,7 +177,7 @@ export default class UserSettings extends React.Component {
 
         return (
             <div id="mobile-view-container">
-                <div className="secDiv">
+                <Paper id="pDiv">
                     <Avatar alt="Remy Sharp" src={myProfilePic} id="user-pic" />
                     <Button id="editBtn">Edit Profile Picture</Button>
                     <br/>
@@ -238,9 +240,9 @@ export default class UserSettings extends React.Component {
                         </Grid>
                     </Grid>
                     <Button id="editBtn" onClick={this.changePI}>{PItxt}</Button>
-                </div>
+                </Paper>
 
-                <div className="secDiv">
+                <Paper id="pDiv">
                     <FormControl variant="outlined">
                         <FormGroup>
                             <FormControlLabel
@@ -275,12 +277,15 @@ export default class UserSettings extends React.Component {
                         
                     </FormControl>
                     <Button id="editBtn" onClick={this.changeLP}>{LPtxt}</Button>
-                </div>
+                </Paper>
 
-                <div className="secDiv">
+                <Paper id="pDiv">
                     <Button id="editBtn">Retake RCI Survey</Button>
-                </div>
-                <div>
+                </Paper>
+                <br/>
+                <br/>
+                <br/>
+                <div id="bottombar">
                 <NavBar url="/user-settings"/>
                 </div>
             </div>
