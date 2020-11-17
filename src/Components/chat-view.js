@@ -26,9 +26,6 @@ const messages = [];
 messages.push(generateMessage(`You've got to be kidding me`, 2));
 messages.push(generateMessage(`Is this in the budget?`, 3,  {image:'https://static.dezeen.com/uploads/2020/02/house-in-the-landscape-niko-arcjitect-architecture-residential-russia-houses-khurtin_dezeen_2364_hero.jpg'}));
 
-for (let i = 0; i < 5; i++) {
-  messages.push(generateMessage(loremIpsum.substring(0,(Math.random() * 100000)%loremIpsum.length), i))
-}
 
 messages.push(generateMessage('You both have started a chat', 2, {system: true}));
 
@@ -72,12 +69,6 @@ const group_messages = [
     image: 'https://photos.zolo.ca/495-upper-wentworth-street-hamilton-H4088865-1-p.jpg?2020-09-23+06%3A45%3A17'
   }
 ].reverse();
-
-
-for (let i = 0; i < 5; i++) {
-  messages.push(generateMessage(loremIpsum.substring(0,(Math.random() * 100000)%loremIpsum.length), i))
-}
-
 
 function generateMessage(text, index, additionalData) {
   return {
