@@ -67,6 +67,10 @@
     background-color: #dae0ff;
 }
 
+.secondarybg{
+    background-color: #3f51b5;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 5px;

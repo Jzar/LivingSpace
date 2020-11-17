@@ -128,6 +128,7 @@
   
     .profile-name{
       margin-left: 8px;
+      text-decoration: none;
     }
   
     .chat-button-container {

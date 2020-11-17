@@ -11,6 +11,8 @@ import Checkbox from '@material-ui/core/Checkbox';
 import Paper from '@material-ui/core/Paper'
 import NavBar from "./nav-bar";
 import {Link} from "react-router-dom";
+import 'react-svg-radar-chart/build/css/index.css'
+import RadarChart from 'react-svg-radar-chart';
 
 
 // Icons and Images
@@ -20,6 +22,7 @@ import AndroidPhone from '@material-ui/icons/PhoneAndroid';
 import MailOutline from '@material-ui/icons/MailOutline';
 import AssignmentInd from '@material-ui/icons/AssignmentInd';
 import CardMembershipIcon from '@material-ui/icons/CardMembership';
+import { Typography } from '@material-ui/core';
 
 
 export default class UserSettings extends React.Component {
@@ -175,11 +178,37 @@ export default class UserSettings extends React.Component {
             LPtxt = "Save Changes"
         }
 
+        const character_data = [
+            {
+                data: {
+                    cleanliness: 0.8,
+                    noisiness: 0.7,
+                    social: 0.5,
+                    academic: 0.5,
+                    pandemic_precautions: 0.8
+        
+                },
+                meta : {color: "blue"}
+            }
+        ];
+        
+        const captions = {
+                    cleanliness: 'Cleanliness',
+                    noisiness: 'Noise',
+                    social: 'Social',
+                    academic: 'Academic',
+                    pandemic_precautions: 'Covid'
+        };
+
         return (
-            <div id="mobile-view-container">
+            <div id="mobile-view-container" className="secondarybg">
                 <Paper id="pDiv">
+                    <Typography>Personal Info</Typography>
+                    <br/>
                     <Avatar alt="Remy Sharp" src={myProfilePic} id="user-pic" />
-                    <Button id="editBtn">Edit Profile Picture</Button>
+                    <Button id="editBtn" color="primary" variant="contained"
+                    >Edit Profile Picture</Button>
+                    <br/>
                     <br/>
 
                     <TextField id="name-input" label="Name"
@@ -244,6 +273,8 @@ export default class UserSettings extends React.Component {
                 </Paper>
 
                 <Paper id="pDiv">
+                    <Typography>Location Preferences</Typography>
+                    <br/>
                     <FormControl variant="outlined">
                         <FormGroup>
                             <FormControlLabel className="location-checkbox"
@@ -282,6 +313,14 @@ export default class UserSettings extends React.Component {
                 </Paper>
 
                 <Paper id="pDiv">
+                    <Typography>Roommate Compatability Index</Typography>
+                    <br/>
+                        <RadarChart
+                            captions={captions}
+                            data={character_data}
+                            size={200}
+                        />   
+
                     <Button color="primary" variant="contained"
                     component={Link} to={"/rc-survey"}
                     id="editBtn">Retake RCI Survey</Button>

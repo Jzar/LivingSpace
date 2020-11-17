@@ -27,7 +27,7 @@ class ProfileFeed extends React.Component{
 
         return(
        
-            <div id="mobile-view-container">
+            <div id="mobile-view-container" className="secondarybg">
                 <div className= "feed-contatiner">
                 
                     <div id="all-cards">
