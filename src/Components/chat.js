@@ -34,7 +34,7 @@ class CustomChat extends Component{
 
 
     render(){return(
-        <div className="App" style={styles.container}>
+        <div style={styles.container}>
             <div style={styles.chat}>
             <div >
                 <div style={styles.leftDiv}>
