@@ -89,16 +89,16 @@ import IconButton from '@material-ui/core/IconButton';
     }
 
     return (
-        <div className="outerDiv">
+        <div >
             <div style={getChatStyle()}>
-            <IconButton component={Link} to={"/chat"} style={{float: 'center', width: "75%", height: 75}}>
-                {getChatIcon()}
-            </IconButton>
+                <IconButton component={Link} to={"/chat"} style={{float: 'center', width: "75%", height: 75}}>
+                    {getChatIcon()}
+                </IconButton>
             </div>
             <div style={getForumStyle()}>
-            <IconButton component={Link} to={"/group"} style={{float: 'center', width: "75%", height: 75}}>
-                {getForumIcon(props.type)}
-            </IconButton>
+                <IconButton component={Link} to={"/group"} style={{float: 'center', width: "75%", height: 75}}>
+                    {getForumIcon(props.type)}
+                </IconButton>
             </div>     
         </div> 
         );

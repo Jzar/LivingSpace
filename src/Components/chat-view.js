@@ -115,35 +115,41 @@ class ChatView extends Component {
   render() {
     return (
       <Switch>
+         <div id="mobile-view-container">
         <Route exact path="/chat">
-            <div>
+
+         
+          <div>
                 <IconButton component={Link} to={"/profile-feed"} style={{float: 'left', width: "10%", height: 20}}>
                 <ArrowBackIcon fontSize="large"/>
                 </IconButton>
             <h1>Chats</h1>
-            <ul>
 
-            </ul>
             </div>
           <hr/>
-          <CustomCard 
-            link={"/1"} 
-            name={messages[0].user.name} 
-            content={messages[0].text}>  
-          </CustomCard>
-          <CustomCard 
-            link={"/2"} 
-            name={"Sarah"} 
-            content={"Are you still looking?"}>  
-          </CustomCard>
-          <CustomCard 
-            link={"/3"} 
-            name={"Giacomo"} 
-            content={"Hi, are you still looking for groups?"}>  
-          </CustomCard>
-          <div>
-            <ChatNav url="chat"/>
-          </div>
+            <div id="chat-component">
+              <div id="cards-component">
+                  <CustomCard 
+                    link={"/1"} 
+                    name={messages[0].user.name} 
+                    content={messages[0].text}>  
+                  </CustomCard>
+                  <CustomCard 
+                    link={"/2"} 
+                    name={"Sarah"} 
+                    content={"Are you still looking?"}>  
+                  </CustomCard>
+                  <CustomCard 
+                    link={"/3"} 
+                    name={"Giacomo"} 
+                    content={"Hi, are you still looking for groups?"}>  
+                  </CustomCard>
+                </div>
+                <div id="ChatBarComponent">
+                  <ChatNav url="chat"/>
+                </div>
+            </div>
+          
         </Route>
         <Route exact path="/group">
         <div>
@@ -155,6 +161,8 @@ class ChatView extends Component {
             </ul>
             </div>
           <hr/>
+          <div id="chat-component">
+          <div className="cards-component">
           <CustomCard 
             link={"/g1"} 
             name={"Bilal, Brian, Connor, Giacomo"} 
@@ -170,9 +178,13 @@ class ChatView extends Component {
             name={"Ahmed, Anthony, Gary, Ryan"} 
             content={"Gary: When is the next viewing?"}>  
           </CustomCard>
-          <div>
+          </div>
+          
+          <div id="ChatBarComponent">
             <ChatNav url="group"/>
           </div>
+          </div>
+          
         </Route>
         <Route exact path="/1">
           <CustomChat messages={messages} link={"/chat"} name={this.state.messages[0].user.name}/>
@@ -186,6 +198,7 @@ class ChatView extends Component {
         <Route exact path="/profile">
           <NavBar url="/profile"/>
         </Route>
+        </div>
       </Switch>
     );
   }

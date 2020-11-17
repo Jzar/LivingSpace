@@ -123,3 +123,14 @@ img.MuiAvatar-img {
   display: flex;
   flex-direction: column-reverse;
 }
+
+div#chat-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 86%;
+}
+
+div#ChatBarComponent {
+  border-top: groove;
+}
